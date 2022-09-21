@@ -12,6 +12,51 @@
     --White: hsl(0, 0%, 100%);
 }
 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 body{
     box-sizing: border-box;
     display: flex;
@@ -20,6 +65,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--main-bg);
+    padding: 10px;
 }
 
 .card-screen{
@@ -77,23 +123,32 @@ body{
     opacity: 1;
 }
 
-
-.card-title{
-    margin: 1rem 0;
+.card-title
+{
+    margin: 1.5rem 0;
     font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: color 300ms ease-in-out;
 }
+
+.card-title:hover, .card-title:active{
+    color: var(--Cyan);
+}
+
 .card-decription{
     font-size: 1.1rem;
     color: var(--Soft-blue);
     margin: 0;
-    max-width: 80%;
+    max-width: 95%;
 }
 
 .card-price{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--line-color);
-    padding: 0.4rem 0rem;
+    padding: 1.5rem 0rem;
+    margin: 0.2rem 0;
 }
 
 .card-price p svg{
@@ -131,6 +186,12 @@ body{
 .card-autor-name{
     color: var(--White);
     margin-left: 0.2rem;
+    text-decoration: none;
+    transition: color 300ms ease-in-out;
+}
+
+.card-autor-name:hover,.card-autor-name:active{
+    color: var(--Cyan);
 }
 
 .card-profile-image
@@ -143,7 +204,7 @@ body{
 .attribution{
     margin-top: 1rem;
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 .attribution a {
     color: var(--Cyan);
